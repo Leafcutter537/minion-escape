@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5925594762513352235
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 916752630, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: potionType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387772985211730030, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e4eb6317b21c22942af553ead294272c, type: 3}
+    - target: {fileID: 6430587764433897024, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.14509803
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587764433897024, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.25001195
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587764433897024, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992155, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_Name
+      value: Potion_Rage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430587765017992157, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066890423605681925, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.14509803
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066890423605681925, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.18485013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066890423605681925, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0572f6228640a6d46bc91e1861e5d0bd, type: 3}

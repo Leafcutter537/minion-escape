@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enraged_Zombie_Animator
+  m_Controller: {fileID: 9100000, guid: bd44d868ccf0afd48bea3b4da6409ab8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: bc2662f8379bc93488fda910257ec66d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b9432908c4652444c97c618b25e56a99, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0dd049bec8bbe7e4a8feafeec1e494b8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 57155f48f3d945648a54caf491d5cc03, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d2af080a4c494714483d2de698638992, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c91bea561e0fc404db32b142753839c3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 78fecb536e2b5c0489d594e5792793c8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 10247e1eaf0307a49ac08dd9ea2538b0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 26fe51a46cbe1a54b9f350bbe12935ad, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1ee8a616003dd2345bc50afc7db35134, type: 2}
