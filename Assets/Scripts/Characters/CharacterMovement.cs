@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] protected CharacterAnimator characterAnimator;
+    public CharacterAnimator characterAnimator;
     [SerializeField] protected List<CharacterAction> characterActions;
     public SpriteRenderer spriteRenderer;
     public new Rigidbody2D rigidbody;

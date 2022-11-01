@@ -269,7 +269,6 @@ MonoBehaviour:
   behaviors:
   - {fileID: 3395412083445361154}
   - {fileID: 2463504578405519048}
-  playerTransform: {fileID: 0}
 --- !u!114 &2143700472800914896
 MonoBehaviour:
   m_ObjectHideFlags: 0

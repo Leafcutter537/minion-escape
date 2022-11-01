@@ -324,12 +324,14 @@ GameObject:
   - component: {fileID: 5229943335698845236}
   - component: {fileID: 5229943335698845237}
   - component: {fileID: 5229943335698845225}
+  - component: {fileID: 863168660196847627}
   - component: {fileID: 4685628477968124993}
   - component: {fileID: 5229943335698845238}
   - component: {fileID: 5229943335698845239}
   - component: {fileID: 1691574819}
   - component: {fileID: 5229943335698845224}
   - component: {fileID: 1691574826}
+  - component: {fileID: 2329100502962948449}
   m_Layer: 3
   m_Name: Player Character
   m_TagString: Player
@@ -353,6 +355,7 @@ Transform:
   - {fileID: 5229943336467675083}
   - {fileID: 5229943335767496582}
   - {fileID: 1556857379122603760}
+  - {fileID: 588264356272031400}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -372,6 +375,7 @@ MonoBehaviour:
   characterActions:
   - {fileID: 5229943335698845224}
   - {fileID: 1691574819}
+  - {fileID: 2329100502962948449}
   spriteRenderer: {fileID: 5229943335308486785}
   rigidbody: {fileID: 5229943335698845238}
   moveSpeed: 5
@@ -416,6 +420,20 @@ MonoBehaviour:
   - {fileID: 6017717923809762637, guid: cc873bd3517c1d14288e8b7bc39e8760, type: 3}
   - {fileID: 2829426701186746038, guid: ae65309f65650194aac0aaaa0266236c, type: 3}
   projectileSpeed: 7
+--- !u!114 &863168660196847627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229943335698845235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c653c37d7d037a44bb2fd1ecb48d572a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAction: {fileID: 2329100502962948449}
+  cameraTarget: {fileID: 3885873393461886047}
 --- !u!114 &4685628477968124993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,6 +508,7 @@ MonoBehaviour:
   - title: Death
     animationVariable: Death
     animationSetType: 0
+    intValue: 0
     impulseStrength: 0
     nextStep: 1
     duration: 0
@@ -517,12 +536,14 @@ MonoBehaviour:
   - title: Throw Windup
     animationVariable: StartThrow
     animationSetType: 0
+    intValue: 0
     impulseStrength: 0
     nextStep: 0
     duration: 0
   - title: Finish Throw
     animationVariable: FinishThrow
     animationSetType: 0
+    intValue: 0
     impulseStrength: 0
     nextStep: 1
     duration: 0
@@ -545,6 +566,34 @@ MonoBehaviour:
   inventoryUI: {fileID: 0}
   characterAnimator: {fileID: 5229943335308486787}
   selectedType: 0
+--- !u!114 &2329100502962948449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229943335698845235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33cab7d0648e6d547a0583fd1b1923b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Look
+  characterAnimator: {fileID: 5229943335308486787}
+  rigidbody: {fileID: 5229943335698845238}
+  characterMovement: {fileID: 5229943335698845237}
+  actionSteps:
+  - title: Look
+    animationVariable: AnimState
+    animationSetType: 3
+    intValue: 0
+    impulseStrength: 0
+    nextStep: 0
+    duration: 0
+  hitPoints: []
+  hitBoxSize: 0
+  collider: {fileID: 0}
+  isActing: 0
 --- !u!1 &5229943335767496581
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,3 +656,51 @@ Transform:
   m_Father: {fileID: 5229943335698845236}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7041049487178402473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588264356272031400}
+  - component: {fileID: 3885873393461886047}
+  m_Layer: 3
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &588264356272031400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7041049487178402473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5229943335698845236}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3885873393461886047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7041049487178402473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade15fa0531153d4c8b7985fea9e58c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5229943335698845236}
+  lookDistance: 3
+  panSpeed: 7
+  lookDirection: {x: 0, y: 0}

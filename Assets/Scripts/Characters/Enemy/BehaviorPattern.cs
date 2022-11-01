@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class BehaviorPattern : MonoBehaviour
 {
 
-    [SerializeField] protected EnemyMovement enemyMovement;
+    [SerializeField] protected NonplayerMovement enemyMovement;
 
     [HideInInspector]
     public bool isActive;

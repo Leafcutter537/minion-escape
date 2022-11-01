@@ -60,6 +60,9 @@ public class CharacterAction : MonoBehaviour
             case (CharacterActionStep.AnimationSetType.Trigger):
                 characterAnimator.SetTrigger(animationVariable);
                 break;
+            case (CharacterActionStep.AnimationSetType.SetInt):
+                characterAnimator.SetInt(animationVariable, actionSteps[currentStep].intValue);
+                break;
         }
     }
 

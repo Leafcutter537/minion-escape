@@ -8,6 +8,7 @@ public class PotionPickup : MonoBehaviour
     public PotionType potionType;
     [SerializeField] private ParticleSystem acquireParticles;
     [SerializeField] private Animator animator;
+    public bool pickedUp;
 
     public void PickUpAnimation()
     {

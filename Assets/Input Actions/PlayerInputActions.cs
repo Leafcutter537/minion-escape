@@ -89,6 +89,42 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Button"",
+                    ""id"": ""6cf8d500-1a88-4f86-a3e3-bfe0e93c10e8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveCamera"",
+                    ""type"": ""Button"",
+                    ""id"": ""fab72970-c1ed-4cd3-828d-56382abda576"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CycleUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""08d138b4-2626-4e20-86a8-306e0d2dbf20"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CycleDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""2c5f3f54-1e95-484e-b6fb-9770068ae535"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -265,6 +301,138 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Select Three"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""57e0d5a2-1f26-40b3-80c8-e21ad4b32f38"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""91090db5-a95e-4c6d-88b1-4d58fd72bfe9"",
+                    ""path"": ""Dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""c4abb84d-7b27-4325-b3ab-0ddf08511ca7"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""5acf4252-c10b-49e8-880e-3dc944f0db4c"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""5ef01249-b1fe-47f9-a300-6a69eedc2f32"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""2f93e1db-a50a-47c9-a211-1d5785785f40"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""b8ea3c8e-ecb0-4cc9-a64a-f8003c5e9be1"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""4006b158-2756-4aee-bb1f-f1da0f256b20"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""90e54510-188e-4c5e-beba-da57782d1fbf"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""3717203d-3656-4763-9b1a-a3d2d56a334a"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7944cb1f-8caa-4b8f-b616-627c80432bd6"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""CycleUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4558ba0a-5897-45e9-a1dc-1ce1631641f7"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""CycleDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -785,6 +953,56 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Cutscene"",
+            ""id"": ""8db7ca8f-79f5-4a76-b3b5-b8665563e735"",
+            ""actions"": [
+                {
+                    ""name"": ""Continue"",
+                    ""type"": ""Button"",
+                    ""id"": ""4f514a77-0e9e-43d5-b163-e27c1d514de1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""9974ce1c-bdb2-4a0d-9f13-5d91e596d93d"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Continue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""000890e2-bf7e-435b-b067-557edea46bf9"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Continue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a7d86f1-e9ec-4282-b537-1e31c22967b0"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Continue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -859,6 +1077,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_SelectOne = m_Player.FindAction("Select One", throwIfNotFound: true);
         m_Player_SelectTwo = m_Player.FindAction("Select Two", throwIfNotFound: true);
         m_Player_SelectThree = m_Player.FindAction("Select Three", throwIfNotFound: true);
+        m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
+        m_Player_MoveCamera = m_Player.FindAction("MoveCamera", throwIfNotFound: true);
+        m_Player_CycleUp = m_Player.FindAction("CycleUp", throwIfNotFound: true);
+        m_Player_CycleDown = m_Player.FindAction("CycleDown", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -871,6 +1093,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // Cutscene
+        m_Cutscene = asset.FindActionMap("Cutscene", throwIfNotFound: true);
+        m_Cutscene_Continue = m_Cutscene.FindAction("Continue", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -937,6 +1162,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_SelectOne;
     private readonly InputAction m_Player_SelectTwo;
     private readonly InputAction m_Player_SelectThree;
+    private readonly InputAction m_Player_Look;
+    private readonly InputAction m_Player_MoveCamera;
+    private readonly InputAction m_Player_CycleUp;
+    private readonly InputAction m_Player_CycleDown;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -948,6 +1177,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @SelectOne => m_Wrapper.m_Player_SelectOne;
         public InputAction @SelectTwo => m_Wrapper.m_Player_SelectTwo;
         public InputAction @SelectThree => m_Wrapper.m_Player_SelectThree;
+        public InputAction @Look => m_Wrapper.m_Player_Look;
+        public InputAction @MoveCamera => m_Wrapper.m_Player_MoveCamera;
+        public InputAction @CycleUp => m_Wrapper.m_Player_CycleUp;
+        public InputAction @CycleDown => m_Wrapper.m_Player_CycleDown;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -978,6 +1211,18 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @SelectThree.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelectThree;
                 @SelectThree.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelectThree;
                 @SelectThree.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelectThree;
+                @Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+                @MoveCamera.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveCamera;
+                @MoveCamera.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveCamera;
+                @MoveCamera.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveCamera;
+                @CycleUp.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCycleUp;
+                @CycleUp.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCycleUp;
+                @CycleUp.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCycleUp;
+                @CycleDown.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCycleDown;
+                @CycleDown.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCycleDown;
+                @CycleDown.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCycleDown;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1003,6 +1248,18 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @SelectThree.started += instance.OnSelectThree;
                 @SelectThree.performed += instance.OnSelectThree;
                 @SelectThree.canceled += instance.OnSelectThree;
+                @Look.started += instance.OnLook;
+                @Look.performed += instance.OnLook;
+                @Look.canceled += instance.OnLook;
+                @MoveCamera.started += instance.OnMoveCamera;
+                @MoveCamera.performed += instance.OnMoveCamera;
+                @MoveCamera.canceled += instance.OnMoveCamera;
+                @CycleUp.started += instance.OnCycleUp;
+                @CycleUp.performed += instance.OnCycleUp;
+                @CycleUp.canceled += instance.OnCycleUp;
+                @CycleDown.started += instance.OnCycleDown;
+                @CycleDown.performed += instance.OnCycleDown;
+                @CycleDown.canceled += instance.OnCycleDown;
             }
         }
     }
@@ -1112,6 +1369,39 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // Cutscene
+    private readonly InputActionMap m_Cutscene;
+    private ICutsceneActions m_CutsceneActionsCallbackInterface;
+    private readonly InputAction m_Cutscene_Continue;
+    public struct CutsceneActions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public CutsceneActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Continue => m_Wrapper.m_Cutscene_Continue;
+        public InputActionMap Get() { return m_Wrapper.m_Cutscene; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CutsceneActions set) { return set.Get(); }
+        public void SetCallbacks(ICutsceneActions instance)
+        {
+            if (m_Wrapper.m_CutsceneActionsCallbackInterface != null)
+            {
+                @Continue.started -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnContinue;
+                @Continue.performed -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnContinue;
+                @Continue.canceled -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnContinue;
+            }
+            m_Wrapper.m_CutsceneActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Continue.started += instance.OnContinue;
+                @Continue.performed += instance.OnContinue;
+                @Continue.canceled += instance.OnContinue;
+            }
+        }
+    }
+    public CutsceneActions @Cutscene => new CutsceneActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1166,6 +1456,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnSelectOne(InputAction.CallbackContext context);
         void OnSelectTwo(InputAction.CallbackContext context);
         void OnSelectThree(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
+        void OnMoveCamera(InputAction.CallbackContext context);
+        void OnCycleUp(InputAction.CallbackContext context);
+        void OnCycleDown(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
@@ -1179,5 +1473,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    public interface ICutsceneActions
+    {
+        void OnContinue(InputAction.CallbackContext context);
     }
 }

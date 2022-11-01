@@ -105,6 +105,7 @@ public class PlayerThrow : MonoBehaviour
         {
             if (inventory.HasPotion())
             {
+                inventory.isThrowingPotion = true;
                 throwAction.StartAction();
                 indicator = Instantiate(trajectoryPrefab, projectileSpawnPosition, Quaternion.identity).GetComponent<TrajectoryIndicator>();
                 indicator.gravity = Physics2D.gravity.y;
@@ -123,6 +124,7 @@ public class PlayerThrow : MonoBehaviour
     {
         if (isAiming == true)
         {
+            inventory.isThrowingPotion = false;
             throwAction.CancelAction();
             Destroy(indicator.gameObject);
             isAiming = false;
@@ -133,6 +135,7 @@ public class PlayerThrow : MonoBehaviour
     {
         if (isAiming == true)
         {
+            inventory.isThrowingPotion = false;
             CreateProjectile();
             throwAction.NextStepInput();
             Destroy(indicator.gameObject);

@@ -14,6 +14,7 @@ public class CharacterActionStep
     [Header("Animation")]
     public string animationVariable;
     public AnimationSetType animationSetType;
+    public int intValue;
 
     [Header("Movement")]
     public float impulseStrength;
@@ -27,6 +28,7 @@ public class CharacterActionStep
         Trigger,
         SetBoolFalse,
         SetBoolTrue,
+        SetInt,
         None
     }
 
