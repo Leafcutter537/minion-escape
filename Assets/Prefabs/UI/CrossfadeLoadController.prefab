@@ -153,7 +153,7 @@ RectTransform:
   m_GameObject: {fileID: 5718283615495582618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9564802, y: 0.9564802, z: 0.9564802}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5718283616254004216}
@@ -180,6 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680cce6dc2fca174e81af9c36c47e214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevelLoadEvent: {fileID: 11400000, guid: 85b1805ea5708014bbd6107bedaa3e4b, type: 2}
+  levelReloadEvent: {fileID: 11400000, guid: 2e929f6d7dc89c742a84f6a09055c10d, type: 2}
   crossfadeElements:
   - {fileID: 5718283615335472617}
   - {fileID: 5718283616363099418}

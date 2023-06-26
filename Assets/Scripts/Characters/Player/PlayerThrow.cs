@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.EventSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,9 @@ public class PlayerThrow : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Animator noPotionWarning;
+    [Header("Events")]
+    [SerializeField] private GamePauseEvent gamePauseEvent;
+    [SerializeField] private GameUnpauseEvent gameUnpauseEvent;
     [Header("Prefabs")]
     [SerializeField] private GameObject trajectoryPrefab;
     [SerializeField] private List<GameObject> projectilePrefabs;
@@ -64,12 +68,28 @@ public class PlayerThrow : MonoBehaviour
         fire.canceled += FinishThrow;
 
         cancelFire.performed += CancelThrow;
+
+        gamePauseEvent.AddListener(OnGamePause);
+        gameUnpauseEvent.AddListener(OnGameUnpause);
     }
 
     private void OnDisable()
     {
         fire.Disable();
         cancelFire.Disable();
+        gamePauseEvent.RemoveListener(OnGamePause);
+        gameUnpauseEvent.RemoveListener(OnGameUnpause);
+    }
+
+    private void OnGamePause(object sender, EventParameters args)
+    {
+        fire.Disable();
+        cancelFire.Disable();
+    }
+    private void OnGameUnpause(object sender, EventParameters args)
+    {
+        fire.Enable();
+        cancelFire.Enable();
     }
 
     private void SetTrajectoryVelocity()

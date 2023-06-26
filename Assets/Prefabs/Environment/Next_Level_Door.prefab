@@ -146,3 +146,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5855269247418027951}
+  nextLevelLoadEvent: {fileID: 11400000, guid: 85b1805ea5708014bbd6107bedaa3e4b, type: 2}

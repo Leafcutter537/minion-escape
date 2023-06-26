@@ -185,7 +185,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44777921}
-  m_LocalRotation: {x: -1.0255803e-15, y: 0.000000024924326, z: 2.5561897e-23, w: 1}
+  m_LocalRotation: {x: 0, y: 0.000000024954806, z: 0, w: 1}
   m_LocalPosition: {x: -3.62, y: 0.39, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -238,18 +238,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5718283615495582617, guid: d9d8e006faff66d48a0ad88177de06d6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.9564802
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718283615495582617, guid: d9d8e006faff66d48a0ad88177de06d6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.9564802
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718283615495582617, guid: d9d8e006faff66d48a0ad88177de06d6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.9564802
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718283615495582617, guid: d9d8e006faff66d48a0ad88177de06d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -300,10 +288,6 @@ PrefabInstance:
     - target: {fileID: 5718283615495582618, guid: d9d8e006faff66d48a0ad88177de06d6, type: 3}
       propertyPath: m_Name
       value: CrossfadeLoadController
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718283615495582618, guid: d9d8e006faff66d48a0ad88177de06d6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d8e006faff66d48a0ad88177de06d6, type: 3}
@@ -425,7 +409,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: -1.0255803e-15, y: 0.000000024924326, z: 2.5561897e-23, w: 1}
+  m_LocalRotation: {x: 0, y: 0.000000024954806, z: 0, w: 1}
   m_LocalPosition: {x: -3.62, y: 0.39, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -532,7 +516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557214127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.28, y: 1.8, z: -0.27919245}
+  m_LocalPosition: {x: -13.82, y: 1.8, z: -0.27919245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -818,6 +802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1525219714}
   portraitPairings: {fileID: 898273792}
+  nextLevelLoadEvent: {fileID: 11400000, guid: 85b1805ea5708014bbd6107bedaa3e4b, type: 2}
   steps:
   - title: Hero Walks to Center
     orders:

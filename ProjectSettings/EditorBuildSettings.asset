@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level7.unity
     guid: 91ce9f427e7d0f543919eb4dd16bc02b
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: 10e175c152c97d4459ca8c939a5a8206
   m_configObjects: {}

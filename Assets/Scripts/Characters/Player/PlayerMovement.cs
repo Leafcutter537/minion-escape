@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Assets.EventSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,15 +21,15 @@ public class PlayerMovement : CharacterMovement
     [SerializeField] private float jumpCutMultiplier;
     [SerializeField] private float gravityScale;
     [SerializeField] private float fallGravityMultiplier;
-
-
-
+    [Header("Events")]
+    [SerializeField] private GamePauseEvent gamePauseEvent;
+    [SerializeField] private GameUnpauseEvent gameUnpauseEvent;
     [HideInInspector]
     public float lastGroundedTime;
     private float lastJumpInputTime;
     private bool isJumping;
     private bool isJumpCut;
-
+    [Header("Input System")]
     public PlayerInputActions playerControls;
     private InputAction move;
     private InputAction jump;
@@ -46,12 +47,26 @@ public class PlayerMovement : CharacterMovement
         move.Enable();
         jump = playerControls.Player.Jump;
         jump.Enable();
+        gamePauseEvent.AddListener(OnGamePause);
+        gameUnpauseEvent.AddListener(OnGameUnpause);
     }
 
     private void OnDisable()
     {
         jump.Disable();
         move.Disable();
+        gamePauseEvent.RemoveListener(OnGamePause);
+        gameUnpauseEvent.RemoveListener(OnGameUnpause);
+    }
+    private void OnGamePause(object sender, EventParameters args)
+    {
+        jump.Disable();
+        move.Disable();
+    }
+    private void OnGameUnpause(object sender, EventParameters args)
+    {
+        jump.Enable();
+        move.Enable();
     }
 
     // Update is called once per frame

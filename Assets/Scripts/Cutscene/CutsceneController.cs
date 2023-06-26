@@ -11,6 +11,8 @@ public class CutsceneController : MonoBehaviour
     [Header("References")]
     [SerializeField] private DialoguePanel dialoguePanel;
     [SerializeField] private PortraitPairings portraitPairings;
+    [Header("Events")]
+    [SerializeField] private NextLevelLoadEvent nextLevelLoadEvent;
     [Header("Cutscene Steps")]
     public CutsceneStep[] steps;
     private int currentStep;
@@ -39,7 +41,7 @@ public class CutsceneController : MonoBehaviour
         currentStep++;
         if (currentStep >= steps.Length)
         {
-            FindObjectOfType<LevelLoadCrossfade>().LoadNextLevel();
+            nextLevelLoadEvent.Raise(this, null);
         }
         else
         {
@@ -64,6 +66,8 @@ public class CutsceneController : MonoBehaviour
 
     public void CharacterArrived(NonplayerMovement character, Transform point)
     {
+        if (currentStep >= steps.Length)
+            return;
         if (steps[currentStep].nextStep == CutsceneStep.NextStep.CharacterReachesPoint)
         {
             if (character == steps[currentStep].character & point == steps[currentStep].point)

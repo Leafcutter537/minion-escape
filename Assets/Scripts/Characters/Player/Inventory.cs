@@ -8,6 +8,8 @@ public class Inventory : MonoBehaviour
     public Dictionary<PotionPickup.PotionType, int> potions;
     [SerializeField] private InventoryUI inventoryUI;
     [SerializeField] private CharacterAnimator characterAnimator;
+    [SerializeField] private Collider2D characterCollider;
+    private Cauldron cauldron;
     [SerializeField] private bool disablePotionSelectOnStage;
     [HideInInspector]
     public bool isThrowingPotion;
@@ -75,6 +77,37 @@ public class Inventory : MonoBehaviour
                 potionPickup.PickUpAnimation();
             }
         }
+        if (collision.tag == "Cauldron")
+        {
+            cauldron = collision.GetComponent<Cauldron>();
+            FillFromCauldron(cauldron);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Cauldron")
+        {
+            cauldron = null;
+        }
+    }
+
+    private void FillFromCauldron(Cauldron cauldron)
+    {
+        if (potions[cauldron.potionType] < cauldron.potionCap)
+        {
+            potions[cauldron.potionType] = cauldron.potionCap;
+            inventoryUI.UpdatePotionUI();
+            cauldron.PickUpAnimation();
+        }
+    }
+
+    private void CheckIfTouchingCauldron()
+    {
+        if (cauldron)
+        {
+            FillFromCauldron(cauldron);
+        }
     }
 
     public bool HasPotion()
@@ -85,6 +118,7 @@ public class Inventory : MonoBehaviour
     public void UsePotion()
     {
         potions[selectedType]--;
+        CheckIfTouchingCauldron();
         inventoryUI.UpdatePotionUI();
     }
 

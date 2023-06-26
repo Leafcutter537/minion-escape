@@ -1,9 +1,14 @@
 using System.Collections.Generic;
+using Assets.EventSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelLoadCrossfade : MonoBehaviour
 {
+    [Header("Events")]
+    [SerializeField] private NextLevelLoadEvent nextLevelLoadEvent;
+    [SerializeField] private LevelReloadEvent levelReloadEvent;
+    [Header("Crossfade")]
     [SerializeField] private List<CrossfadeElement> crossfadeElements;
     [SerializeField] private float waitTime;
     private bool isReloading;
@@ -13,6 +18,16 @@ public class LevelLoadCrossfade : MonoBehaviour
     private void Awake()
     {
         NextFadeIn();
+    }
+    private void OnEnable()
+    {
+        nextLevelLoadEvent.AddListener(LoadNextLevel);
+        levelReloadEvent.AddListener(ReloadLevel);
+    }
+    private void OnDisable()
+    {
+        nextLevelLoadEvent.RemoveListener(LoadNextLevel);
+        levelReloadEvent.RemoveListener(ReloadLevel);
     }
 
     private void Update()
@@ -46,12 +61,12 @@ public class LevelLoadCrossfade : MonoBehaviour
         }
     }
 
-    public void ReloadLevel()
+    private void ReloadLevel(object sender, EventParameters args)
     {
         NextFadeOut();
     }
 
-    public void LoadNextLevel()
+    private void LoadNextLevel(object sender, EventParameters args)
     {
         loadNextLevel = true;
         NextFadeOut();

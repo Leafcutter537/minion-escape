@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PotionPickup
   - Enemy
+  - Cauldron
   layers:
   - Default
   - TransparentFX

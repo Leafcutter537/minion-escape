@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 5229943335698845224}
   - component: {fileID: 1691574826}
   - component: {fileID: 2329100502962948449}
+  - component: {fileID: -1575971576031404345}
   m_Layer: 3
   m_Name: Player Character
   m_TagString: Player
@@ -376,6 +377,7 @@ MonoBehaviour:
   - {fileID: 5229943335698845224}
   - {fileID: 1691574819}
   - {fileID: 2329100502962948449}
+  - {fileID: -1575971576031404345}
   spriteRenderer: {fileID: 5229943335308486785}
   rigidbody: {fileID: 5229943335698845238}
   moveSpeed: 5
@@ -394,6 +396,8 @@ MonoBehaviour:
   jumpCutMultiplier: 0.8
   gravityScale: 1
   fallGravityMultiplier: 3
+  gamePauseEvent: {fileID: 11400000, guid: a5cb0fa30d458f2419c59fef3cbfacf9, type: 2}
+  gameUnpauseEvent: {fileID: 11400000, guid: 2b307927f85cde24480c5da2d5e5f892, type: 2}
   lastGroundedTime: 0
 --- !u!114 &5229943335698845225
 MonoBehaviour:
@@ -414,6 +418,8 @@ MonoBehaviour:
   playerMovement: {fileID: 5229943335698845237}
   inventory: {fileID: 1691574826}
   noPotionWarning: {fileID: 1968043835725653672}
+  gamePauseEvent: {fileID: 11400000, guid: a5cb0fa30d458f2419c59fef3cbfacf9, type: 2}
+  gameUnpauseEvent: {fileID: 11400000, guid: 2b307927f85cde24480c5da2d5e5f892, type: 2}
   trajectoryPrefab: {fileID: 6874495944509987802, guid: e2cef83276746574795fe7302aae75be, type: 3}
   projectilePrefabs:
   - {fileID: 2829426701186746038, guid: bd8188ff6356cd34a812765cf6583163, type: 3}
@@ -516,6 +522,7 @@ MonoBehaviour:
   hitBoxSize: 0
   collider: {fileID: 0}
   isActing: 0
+  levelReloadEvent: {fileID: 11400000, guid: 2e929f6d7dc89c742a84f6a09055c10d, type: 2}
 --- !u!114 &5229943335698845224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,6 +572,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
   characterAnimator: {fileID: 5229943335308486787}
+  characterCollider: {fileID: 5229943335698845239}
+  disablePotionSelectOnStage: 0
+  isThrowingPotion: 0
   selectedType: 0
 --- !u!114 &2329100502962948449
 MonoBehaviour:
@@ -590,6 +600,34 @@ MonoBehaviour:
     impulseStrength: 0
     nextStep: 0
     duration: 0
+  hitPoints: []
+  hitBoxSize: 0
+  collider: {fileID: 0}
+  isActing: 0
+--- !u!114 &-1575971576031404345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229943335698845235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9c96d7725888d4a89c2c6b9ecc8847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: End Level Action
+  characterAnimator: {fileID: 5229943335308486787}
+  rigidbody: {fileID: 0}
+  characterMovement: {fileID: 5229943335698845237}
+  actionSteps:
+  - title: Wait
+    animationVariable: AnimState
+    animationSetType: 3
+    intValue: 0
+    impulseStrength: 0
+    nextStep: 2
+    duration: 5
   hitPoints: []
   hitBoxSize: 0
   collider: {fileID: 0}

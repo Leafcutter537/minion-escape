@@ -607,6 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1935962724}
   portraitPairings: {fileID: 1014711042}
+  nextLevelLoadEvent: {fileID: 11400000, guid: 85b1805ea5708014bbd6107bedaa3e4b, type: 2}
   steps:
   - title: Player Enters
     orders:
